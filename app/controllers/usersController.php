@@ -157,7 +157,7 @@ class usersController extends Controller
                 View::info('Eureka!!');
             }
             else {
-                View::error('La combinación de su nombre de usuario & contraseña no pudo ser identificada.');
+                View::error('Wrong username/password combination');
             }
         }
 
@@ -210,10 +210,10 @@ class usersController extends Controller
             }
             if ($user->delete()) {
                 if ($user->count == 1 ) {
-                    echo '{ "response": "success", "content": "<div class=\'user-deleted well\'>User has been deleted successfully</div>"}';
+                    echo '{ "response": "success", "content": "<div class=\'user-deleted well\'>User has been deleted successfully</div>" }';
                 }
                 else {
-                    echo '{ "response": "fail", "content": "<div class=\'user-not-deleted well\'>An unexpected problem occurred, please try again</div>"}';
+                    echo '{ "response": "fail", "content": "<div class=\'user-not-deleted well\'>An unexpected problem occurred, please try again</div>" }';
                 }
             }
         }

@@ -11,12 +11,6 @@ class homeController extends Controller
 {
 	public function index ( ) {
 
-//        $roles = new Role();
-//
-//        $roles->with('users')->where('roles.id', 2);
-//
-//        !ddd($roles->get());
-
 		View::render('home/index');
 	}
 }
