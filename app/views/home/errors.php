@@ -1,0 +1,1 @@
+<?php http_response_code($data[0]->server_response); ?>
